@@ -1,0 +1,167 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83F7D87A2702715100CBC5C4 /* CustomInterval.instrpkg in Sources */ = {isa = PBXBuildFile; fileRef = 83F7D8792702715100CBC5C4 /* CustomInterval.instrpkg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83F7D8762702715100CBC5C4 /* CustomInterval.instrdst */ = {isa = PBXFileReference; explicitFileType = com.apple.instruments.instrdst; includeInIndex = 0; path = CustomInterval.instrdst; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F7D8792702715100CBC5C4 /* CustomInterval.instrpkg */ = {isa = PBXFileReference; lastKnownFileType = "com.apple.instruments.package-definition"; path = CustomInterval.instrpkg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		83F7D86F2702715100CBC5C4 = {
+			isa = PBXGroup;
+			children = (
+				83F7D8782702715100CBC5C4 /* CustomInterval */,
+				83F7D8772702715100CBC5C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83F7D8772702715100CBC5C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83F7D8762702715100CBC5C4 /* CustomInterval.instrdst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83F7D8782702715100CBC5C4 /* CustomInterval */ = {
+			isa = PBXGroup;
+			children = (
+				83F7D8792702715100CBC5C4 /* CustomInterval.instrpkg */,
+			);
+			path = CustomInterval;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83F7D8752702715100CBC5C4 /* CustomInterval */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83F7D87B2702715100CBC5C4 /* Build configuration list for PBXNativeTarget "CustomInterval" */;
+			buildPhases = (
+				83F7D8742702715100CBC5C4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomInterval;
+			productName = CustomInterval;
+			productReference = 83F7D8762702715100CBC5C4 /* CustomInterval.instrdst */;
+			productType = "com.apple.product-type.instruments-package";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83F7D8702702715100CBC5C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					83F7D8752702715100CBC5C4 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 83F7D8732702715100CBC5C4 /* Build configuration list for PBXProject "CustomInterval" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83F7D86F2702715100CBC5C4;
+			productRefGroup = 83F7D8772702715100CBC5C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83F7D8752702715100CBC5C4 /* CustomInterval */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83F7D8742702715100CBC5C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F7D87A2702715100CBC5C4 /* CustomInterval.instrpkg in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		83F7D8712702715100CBC5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		83F7D8722702715100CBC5C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		83F7D87C2702715100CBC5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		83F7D87D2702715100CBC5C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83F7D8732702715100CBC5C4 /* Build configuration list for PBXProject "CustomInterval" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F7D8712702715100CBC5C4 /* Debug */,
+				83F7D8722702715100CBC5C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83F7D87B2702715100CBC5C4 /* Build configuration list for PBXNativeTarget "CustomInterval" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F7D87C2702715100CBC5C4 /* Debug */,
+				83F7D87D2702715100CBC5C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83F7D8702702715100CBC5C4 /* Project object */;
+}
