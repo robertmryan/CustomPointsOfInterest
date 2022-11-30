@@ -1,0 +1,241 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83F7D87A2702715100CBC5C4 /* CustomPointsOfInterest.instrpkg in Sources */ = {isa = PBXBuildFile; fileRef = 83F7D8792702715100CBC5C4 /* CustomPointsOfInterest.instrpkg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83F7D8762702715100CBC5C4 /* CustomPointsOfInterest.instrdst */ = {isa = PBXFileReference; explicitFileType = com.apple.instruments.instrdst; includeInIndex = 0; path = CustomPointsOfInterest.instrdst; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F7D8792702715100CBC5C4 /* CustomPointsOfInterest.instrpkg */ = {isa = PBXFileReference; lastKnownFileType = "com.apple.instruments.package-definition"; path = CustomPointsOfInterest.instrpkg; sourceTree = "<group>"; };
+		C423BDD62937D2B4006C5F56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C423BDD82937D3FB006C5F56 /* CustomPointsOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointsOfInterest.swift; sourceTree = "<group>"; };
+		C423BDD92937D51B006C5F56 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		83F7D86F2702715100CBC5C4 = {
+			isa = PBXGroup;
+			children = (
+				C423BDD62937D2B4006C5F56 /* README.md */,
+				C423BDD92937D51B006C5F56 /* LICENSE.md */,
+				83F7D8782702715100CBC5C4 /* CustomPointsOfInterest */,
+				C423BDD72937D3DD006C5F56 /* Example */,
+				83F7D8772702715100CBC5C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83F7D8772702715100CBC5C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83F7D8762702715100CBC5C4 /* CustomPointsOfInterest.instrdst */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83F7D8782702715100CBC5C4 /* CustomPointsOfInterest */ = {
+			isa = PBXGroup;
+			children = (
+				83F7D8792702715100CBC5C4 /* CustomPointsOfInterest.instrpkg */,
+			);
+			path = CustomPointsOfInterest;
+			sourceTree = "<group>";
+		};
+		C423BDD72937D3DD006C5F56 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				C423BDD82937D3FB006C5F56 /* CustomPointsOfInterest.swift */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83F7D8752702715100CBC5C4 /* CustomPointsOfInterest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83F7D87B2702715100CBC5C4 /* Build configuration list for PBXNativeTarget "CustomPointsOfInterest" */;
+			buildPhases = (
+				83F7D8742702715100CBC5C4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CustomPointsOfInterest;
+			productName = CustomInterval;
+			productReference = 83F7D8762702715100CBC5C4 /* CustomPointsOfInterest.instrdst */;
+			productType = "com.apple.product-type.instruments-package";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83F7D8702702715100CBC5C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					83F7D8752702715100CBC5C4 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 83F7D8732702715100CBC5C4 /* Build configuration list for PBXProject "CustomPointsOfInterest" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83F7D86F2702715100CBC5C4;
+			productRefGroup = 83F7D8772702715100CBC5C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83F7D8752702715100CBC5C4 /* CustomPointsOfInterest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83F7D8742702715100CBC5C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F7D87A2702715100CBC5C4 /* CustomPointsOfInterest.instrpkg in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		83F7D8712702715100CBC5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		83F7D8722702715100CBC5C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+			};
+			name = Release;
+		};
+		83F7D87C2702715100CBC5C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		83F7D87D2702715100CBC5C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = UZAPXQTVQ4;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Instruments/Packages";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83F7D8732702715100CBC5C4 /* Build configuration list for PBXProject "CustomPointsOfInterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F7D8712702715100CBC5C4 /* Debug */,
+				83F7D8722702715100CBC5C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83F7D87B2702715100CBC5C4 /* Build configuration list for PBXNativeTarget "CustomPointsOfInterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F7D87C2702715100CBC5C4 /* Debug */,
+				83F7D87D2702715100CBC5C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83F7D8702702715100CBC5C4 /* Project object */;
+}
