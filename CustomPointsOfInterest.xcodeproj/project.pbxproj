@@ -13,6 +13,7 @@
 /* Begin PBXFileReference section */
 		83F7D8762702715100CBC5C4 /* CustomPointsOfInterest.instrdst */ = {isa = PBXFileReference; explicitFileType = com.apple.instruments.instrdst; includeInIndex = 0; path = CustomPointsOfInterest.instrdst; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F7D8792702715100CBC5C4 /* CustomPointsOfInterest.instrpkg */ = {isa = PBXFileReference; lastKnownFileType = "com.apple.instruments.package-definition"; path = CustomPointsOfInterest.instrpkg; sourceTree = "<group>"; };
+		C40D438729BFBA2300981065 /* README-example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "README-example.png"; sourceTree = "<group>"; };
 		C423BDD62937D2B4006C5F56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C423BDD82937D3FB006C5F56 /* CustomPointsOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointsOfInterest.swift; sourceTree = "<group>"; };
 		C423BDD92937D51B006C5F56 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 			children = (
 				C423BDD62937D2B4006C5F56 /* README.md */,
 				C423BDD92937D51B006C5F56 /* LICENSE.md */,
+				C40D438729BFBA2300981065 /* README-example.png */,
 				83F7D8782702715100CBC5C4 /* CustomPointsOfInterest */,
 				C423BDD72937D3DD006C5F56 /* Example */,
 				83F7D8772702715100CBC5C4 /* Products */,
