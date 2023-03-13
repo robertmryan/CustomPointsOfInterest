@@ -58,7 +58,7 @@ To use this tool:
 
 - - -
 
-It is essential here, but the Swift source code also includes an extension to `OSLog` to provide a similar API (sans custom event concept engineering functionality). E.g.:
+It is not terribly important, but I've added a separate [`OSLog` extension](Example/OSLog.swift) that provides a similar API (sans custom event concept engineering functionality) when using the standard “Points of Interest”. Obviously, for this, you do not have to install the “Custom Points of Interest” tool in Instruments at all, but rather just use the default one. But you can then do things like:
 
 ```swift
 let poi = OSLog(subsystem: "…", category: .pointsOfInterest)
@@ -68,6 +68,8 @@ poi.interval(lane: "My intervals", "Some label for interval") {
     Thread.sleep(forTimeInterval: 1)
 }
 ```
+
+You obviously, using the standard “Points of Interest”, one loses all the coloring and special symbols that you get when using the event concept engineering types of the “Custom Points of Interest”, but it provides a simpler API than `os_signpost`.
 
 ## Installation
 
