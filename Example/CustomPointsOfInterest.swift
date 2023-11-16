@@ -66,23 +66,6 @@ class CustomPointsOfInterestLog {
         defer { interval.end() }
         return try await block()
     }
-
-    /// Record an interval in “Custom Points of Interest” tool for a non-throwing asynchronous block of work
-    ///
-    /// - Parameters:
-    ///   - lane: The name for the lane in Instruments.
-    ///   - label: The text associated with the particular interval.
-    ///   - concept: The event-concept (i.e., the color) of the lane.
-    ///   - block: The synchronous block to execute.
-    /// - Returns: The value returned by the block, if any.
-
-    func interval<T>(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost, block: () async -> T) async -> T {
-        let interval = InstrumentsInterval(lane: lane, label: label, concept: concept, log: self)
-
-        interval.begin()
-        defer { interval.end() }
-        return await block()
-    }
 }
 
 // MARK: - EventConcept

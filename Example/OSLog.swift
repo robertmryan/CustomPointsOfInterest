@@ -86,22 +86,4 @@ extension OSLog {
         defer { os_signpost(.end, log: self, name: lane, signpostID: id, "%{public}@", label) }
         return try await block()
     }
-
-    /// Record an interval for a non-throwing asynchronous block of work
-    ///
-    /// - Warning: The `string` is public, so be wary of leaking any secure information in this string.
-    ///
-    /// - Parameters:
-    ///   - lane: The name for the lane in Instruments.
-    ///   - string: The text associated with the end of the interval.
-    ///   - block: The synchronous block to execute.
-    /// - Returns: The value returned by the block, if any.
-
-    func interval<T>(lane: StaticString = "Intervals", _ label: String, block: () async -> T) async -> T {
-        let id = OSSignpostID(log: self)
-
-        os_signpost(.begin, log: self, name: lane, signpostID: id, "%{public}@", label)
-        defer { os_signpost(.end, log: self, name: lane, signpostID: id, "%{public}@", label) }
-        return await block()
-    }
 }
