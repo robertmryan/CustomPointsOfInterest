@@ -1,11 +1,11 @@
 //
-//  InstrumentsInterval.swift
+//  CustomSignposter.swift
 //
 //  Created by Robert Ryan on 6/5/21.
 //
 
 import Foundation
-import os.log
+import os.signpost
 
 // MARK: - CustomPointsOfInterestLog
 
@@ -15,11 +15,11 @@ import os.log
 ///
 /// Needless to say, this assumes that you have installed the custom Points of Interest tool in Instrumewnts.
 
-class CustomPointsOfInterestLog {
-    fileprivate let log: OSLog
+class CustomSignposter {
+    private let log: OSSignposter
 
     init(subsystem: String) {
-        log = OSLog(subsystem: subsystem, category: "com.robertmryan.CustomPointsOfInterest")
+        log = OSSignposter(subsystem: subsystem, category: "com.robertmryan.CustomPointsOfInterest")
     }
 
     /// Post an event
@@ -29,10 +29,19 @@ class CustomPointsOfInterestLog {
     ///   - label: The text associated with the particular event.
     ///   - concept: The event-concept (i.e., the color and symbol) of the event.
 
-    func event(lane: StaticString = "Points", _ label: String, concept: EventConcept = .signpost) {
-        os_signpost(.event, log: log, name: lane, InstrumentsInterval.formatString, label, concept.rawValue)
+    func emitEvent(lane: StaticString = "Points", label: String, concept: EventConcept = .signpost) {
+        log.emitEvent(lane, "Label:\(label, privacy: .public),Concept:\(concept.rawValue, privacy: .public)")
     }
 
+    func beginInterval(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost) -> OSSignpostIntervalState {
+        let id = log.makeSignpostID()
+        return log.beginInterval(lane, id: id, "Label:\(label, privacy: .public),Concept:\(concept.rawValue, privacy: .public)")
+    }
+    
+    func endInterval(lane: StaticString = "Points", state: OSSignpostIntervalState) {
+        log.endInterval(lane, state)
+    }
+    
     /// Record an interval in “Custom Points of Interest” tool for a synchronous block of work
     ///
     /// - Parameters:
@@ -42,11 +51,10 @@ class CustomPointsOfInterestLog {
     ///   - block: The synchronous block to execute.
     /// - Returns: The value returned by the block, if any.
 
-    func interval<T>(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost, block: () throws -> T) rethrows -> T {
-        let interval = InstrumentsInterval(lane: lane, label: label, concept: concept, log: self)
+    func withIntervalSignpost<T>(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost, around block: () throws -> T) rethrows -> T {
+        let state = beginInterval(lane: lane, label, concept: concept)
+        defer { endInterval(lane: lane, state: state) }
 
-        interval.begin()
-        defer { interval.end() }
         return try block()
     }
 
@@ -59,18 +67,17 @@ class CustomPointsOfInterestLog {
     ///   - block: The synchronous block to execute.
     /// - Returns: The value returned by the block, if any.
 
-    func interval<T>(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost, block: () async throws -> T) async rethrows -> T {
-        let interval = InstrumentsInterval(lane: lane, label: label, concept: concept, log: self)
+    func withIntervalSignpost<T>(lane: StaticString = "Intervals", _ label: String, concept: EventConcept = .signpost, around block: () async throws -> T) async rethrows -> T {
+        let state = beginInterval(lane: lane, label, concept: concept)
+        defer { endInterval(lane: lane, state: state) }
 
-        interval.begin()
-        defer { interval.end() }
         return try await block()
     }
 }
 
 // MARK: - EventConcept
 
-extension CustomPointsOfInterestLog {
+extension CustomSignposter {
     /// EventConcept enumeration
     ///
     /// This is used to dictate the color of the intervals in our custom instrument.
@@ -99,39 +106,5 @@ extension CustomPointsOfInterestLog {
         case blue     = "Blue"
         case purple   = "Purple"
         case green    = "Green"
-    }
-}
-
-// MARK: - InstrumentsInterval
-
-/// Interval to be shown in custom instrument when profiling app
-
-struct InstrumentsInterval {
-    fileprivate static let formatString: StaticString = "Label:%{public}@,Concept:%{public}@"
-
-    let lane: StaticString
-    let label: String
-    let concept: CustomPointsOfInterestLog.EventConcept
-    let log: CustomPointsOfInterestLog
-    let id: OSSignpostID
-
-    init(lane: StaticString, label: String, concept: CustomPointsOfInterestLog.EventConcept = .signpost, log: CustomPointsOfInterestLog) {
-        self.lane = lane
-        self.concept = concept
-        self.label = label
-        self.log = log
-        self.id = OSSignpostID(log: log.log)
-    }
-
-    /// Manually begin an interval
-
-    func begin() {
-        os_signpost(.begin, log: log.log, name: lane, signpostID: id, Self.formatString, label, concept.rawValue)
-    }
-
-    /// Manually end an interval
-
-    func end() {
-        os_signpost(.end, log: log.log, name: lane, signpostID: id)
     }
 }

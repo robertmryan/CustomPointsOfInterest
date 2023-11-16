@@ -34,7 +34,7 @@
 
     <import-schema>os-signpost</import-schema>
 
-    <!-- See https://help.apple.com/instruments/developer/mac/current/#/dev536412616 -->
+    <!-- See https://help.apple.com/instruments/developer/mac/current/#/dev452657581 -->
     <os-signpost-point-schema>
         <id>custom-point-schema</id>
         <title>Points</title>
